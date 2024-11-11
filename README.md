@@ -111,7 +111,7 @@ Kompilierung mit Docker:
 |------------------------:|------------------:|----------:|-----:|----------------------:|----------------------:|
 |     Apple MacBooPro 14" |             M2max |        64 |   12 |                  50.2 |                  50.2 |
 |     Apple MacBooPro 16" |             M3max |        64 |      |                       |                       |
-|     Apple MacBooPro 16" |             M4max |        48 |      |                       |                       |
+|     Apple MacBooPro 16" |             M4max |        48 |   16 |                       |                  35.3 |
 | Lenovo Thinkpad T14gen2 | Ryzen 5 pro 5650U |        16 |   12 |                    92 |                       |
 |      HP EliteBook 8470p |          i7-3540M |        16 |    4 |                   248 |                       |
 |                         |                   |           |      |                       |                       |
