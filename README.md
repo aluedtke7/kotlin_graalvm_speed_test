@@ -10,14 +10,14 @@ Um alle aufgeführten Beispiele ausführen zu können, müssen die folgenden Pak
 - Docker oder Podman o.ä.
 
 ## Ausführen
-Um das Programm im Development Modus zu starten, gibt man folgendes ein:
+Um das Programm im Development Modus zu starten, gibt man Folgendes ein:
 
     ./mvnw compile quarkus:dev
 
 Hiermit wird das Programm übersetzt und ausgeführt. Bei Änderungen am Source Code wird es automatisch neu 
-kompiliert sobald es nötig ist. Bei einem Rest Service ist dies der Fall, wenn ein neuer Request (nach den Änderungen und Speicherung) eingeht. Der Dev Modus lässt sich mit der Taste `q` beenden.
+kompiliert, sobald es nötig ist. Bei einem Rest Service ist dies der Fall, wenn ein neuer Request (nach den Änderungen und Speicherung) eingeht. Der Dev Modus lässt sich mit der Taste `q` beenden.
 
-> **_Hinweis:_**  Quarkus hat ein Development UI, welches unter http://localhost:8080/q/dev/ erreichbar ist.
+> **_Hinweis:_** Quarkus hat ein Development UI, welches unter http://localhost:8080/q/dev/ erreichbar ist.
 
 Jetzt kann der Rest Service in einer anderen Shell mit `curl` getestet werden:
 
@@ -54,7 +54,7 @@ erzeugt und im lokalen Docker Repository abgelegt.
 
     docker build -f src/main/docker/Dockerfile.native-micro -t quarkus-kotlin-rest-native:1.0.0 .
 
-hierbei wurde das **micro** Basis Image verwendet. Soll das *normale* Basis Image verwendet werden, so
+hierbei wurde das **micro** Basis-Image verwendet. Soll das *normale* Basis-Image verwendet werden, so
 gibt man Folgendes ein:
 
     docker build -f src/main/docker/Dockerfile.native -t quarkus-kotlin-rest-native:1.0.1 .
@@ -107,14 +107,15 @@ Kompilierung mit Docker:
 
 -----------------------------------------------------------------------------------
 
-|                Computer |               Typ | RAM in GB | CPUs | Dauer mit Docker in s | Dauer mit Podman in s |
-|------------------------:|------------------:|----------:|-----:|----------------------:|----------------------:|
-|     Apple MacBooPro 14" |             M2max |        64 |   12 |                  50.2 |                  50.2 |
-|     Apple MacBooPro 16" |             M3max |        64 |      |                       |                       |
-|     Apple MacBooPro 16" |             M4max |        48 |   16 |                       |                  35.3 |
-| Lenovo Thinkpad T14gen2 | Ryzen 5 pro 5650U |        16 |   12 |                    92 |                       |
-|      HP EliteBook 8470p |          i7-3540M |        16 |    4 |                   248 |                       |
-|                         |                   |           |      |                       |                       |
+|                Computer |               Typ | RAM in GB | CPUs | Dauer mit Docker in s | Dauer mit Podman in s | Anmerkung |
+|------------------------:|------------------:|----------:|-----:|----------------------:|----------------------:|----------:|
+|     Apple MacBooPro 16" |             M4max |        48 |   16 |                       |                  35.3 |           |
+|     Apple MacBooPro 16" |             M3max |        64 |      |                       |                       |           |
+|     Apple MacBooPro 14" |             M2max |        64 |   12 |                  50.2 |                  50.2 |         1 |
+|     Apple MacBooPro 16" |             M1max |        32 |   10 |                       |                    63 |           |
+| Lenovo Thinkpad T14gen2 | Ryzen 5 pro 5650U |        16 |   12 |                    92 |                       |         2 |
+|    Lenovo ThinkPad T460 |          i7-6600U |        16 |    4 |                   220 |                       |         2 |
+|      HP EliteBook 8470p |          i7-3540M |        16 |    4 |                   248 |                       |         3 |
 
 -----------------------------------------------------------------------------------
 
@@ -122,7 +123,8 @@ Kompilierung mit Docker:
 > (mindestens 8 GB) zugewiesen werden
 > 
 
-- Verwendet wurde Docker Desktop v4.35.1 auf macOS
-- Verwendet wurde Podman Desktop v1.14 und Podman v5.2.0 auf macOS
-- Verwendet wurde Docker v auf Manjaro/Linux
+Anmerkungen
+1. Verwendet wurde Docker Desktop v4.35.1, Podman Desktop v1.14 und Podman v5.2.0
+2. Verwendet wurde Docker auf Manjaro/Linux
+3. Verwendet wurde Docker auf Arch/Linux
 
