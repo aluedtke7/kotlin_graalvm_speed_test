@@ -4,7 +4,7 @@ Beispiel Rest Service mit Quarkus und Kotlin
 ## Voraussetzungen
 Um alle aufgeführten Beispiele ausführen zu können, müssen die folgenden Pakete/Tools installiert sein:
 
-- Java SDK 17 oder neuer
+- Java SDK 21 oder neuer
 - Ein Text-Editor oder eine IDE
 - `curl` oder Postman
 - Docker oder Podman o.ä.
